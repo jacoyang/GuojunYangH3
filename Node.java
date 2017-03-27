@@ -7,34 +7,33 @@ public class Node
   private Node next;
   private String value;
   
-  public void setPrevious(Node n)
+  public void setPrevious(Node n)//set previous
   {
     previous = n;
   }
   
-  public void setNext(Node m)
+  public void setNext(Node m)//set next
   {
     next = m;
   }
   
-  public void setValue(String z)
+  public void setValue(String z)//set value
   {
     value = z;
   }
   
-  public Node getPrevious()
+  public Node getPrevious()//get previous
   {
     return previous;
   }
   
-  public Node getNext()
+  public Node getNext()//get next
   {
     return next;
   }
   
-  public String getValue()
+  public String getValue()//get value
   {
     return value;
-  }
-  
-}
+  }  
+}//end Node

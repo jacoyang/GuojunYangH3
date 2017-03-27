@@ -1,0 +1,13 @@
+//Guojun Yang
+//001251603
+
+public class Test
+{
+  public static void main(String[] args)
+  {
+    List list = new List();
+    list.insert("jaco");
+    list.forward();
+    list.backward();
+  }
+}

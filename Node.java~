@@ -17,7 +17,7 @@ public class Node
     next = m;
   }
   
-  public void setValue(Node z)
+  public void setValue(String z)
   {
     value = z;
   }
@@ -32,7 +32,7 @@ public class Node
     return next;
   }
   
-  public Node getValue()
+  public String getValue()
   {
     return value;
   }

@@ -1,0 +1,65 @@
+//Guojun Yang
+//001251603
+
+public class List
+{
+  private Node head;
+  private Node tail;
+  
+  public Node find(String match)
+  {
+    Node current = head;
+    while(current != null)
+    {
+      if(match.equals(current.getValue()))
+        return current;
+      else
+        current = current.getNext();
+    }
+    return null;
+  }
+  
+  public void insert(String alpha)
+  {
+    Node guest = new Node();
+    guest.setValue(alpha);
+    if(head == null && tail == null)
+    {
+      head = guest;
+      tail = guest;
+    }
+    else
+    {
+      Node current = head;
+      while(current != null)
+      {
+        if(alpha.compareTo(current.getValue()) < 0)
+        {
+          if(current.getPrevious() == null)
+          {
+            head = guest;
+            current.setPrevious(guest);
+            guest.setNext(current);
+            return;
+          }
+          else
+          {
+            Node previous = current.getPrevious();
+            previous.setNext(guest);
+            guest.setPrevious(previous);
+            guest.setNext(current);
+            current.setPrevious(guest);
+            return;
+          }
+        }
+        else
+          current = current.getNext();
+      }
+      tail.setNext(guest); 
+      guest.setPrevious(tail);
+      tail = guest;
+    }
+  }
+  
+        
+      
